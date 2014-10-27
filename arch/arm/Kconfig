@@ -64,6 +64,9 @@ config TARGET_GPLUGD
 config TARGET_AFEB9260
 	bool "Support afeb9260"
 
+config TARGET_ASM9260T_EVK
+	bool "Support ASM9260T-EVK"
+
 config TARGET_AT91SAM9260EK
 	bool "Support at91sam9260ek"
 
@@ -582,6 +585,7 @@ source "board/armadeus/apf27/Kconfig"
 source "board/armltd/integrator/Kconfig"
 source "board/armltd/vexpress/Kconfig"
 source "board/armltd/vexpress64/Kconfig"
+source "board/alphascale/asm9260t-evk/Kconfig"
 source "board/atmel/at91rm9200ek/Kconfig"
 source "board/atmel/at91sam9260ek/Kconfig"
 source "board/atmel/at91sam9261ek/Kconfig"
