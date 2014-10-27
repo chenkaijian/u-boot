@@ -215,7 +215,7 @@
 
 #else	/* CONFIG_SYS_USE_MMC */
 /* bootstrap + u-boot + env + linux in mmc */
-#define CONFIG_ENV_IS_IN_MMC
+#define CONFIG_ENV_IS_NOWHERE
 /* For FAT system, most cases it should be in the reserved sector */
 #define CONFIG_ENV_OFFSET		0x2000
 #define CONFIG_ENV_SIZE			0x1000
