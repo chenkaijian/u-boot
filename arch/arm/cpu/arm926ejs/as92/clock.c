@@ -1,5 +1,5 @@
 /*
- * [origin: Linux kernel linux/arch/arm/mach-at91/clock.c]
+ * [origin: Linux kernel linux/arch/arm/mach-as92/clock.c]
  *
  * Copyright (C) 2005 David Brownell
  * Copyright (C) 2005 Ivan Kokshaysky
@@ -26,18 +26,18 @@ static unsigned long as92_css_to_rate(unsigned long css)
 }
 
 #ifdef CONFIG_USB_ATMEL
-static unsigned at91_pll_calc(unsigned main_freq, unsigned out_freq)
+static unsigned as92_pll_calc(unsigned main_freq, unsigned out_freq)
 {
 	return 0;
 }
 #endif
 
-static u32 at91_pll_rate(u32 freq, u32 reg)
+static u32 as92_pll_rate(u32 freq, u32 reg)
 {
 	return freq;
 }
 
-int at91_clock_init(unsigned long main_clock)
+int as92_clock_init(unsigned long main_clock)
 {
 #ifndef CONFIG_SYS_AT91_MAIN_CLOCK
 #endif

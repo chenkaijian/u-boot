@@ -51,9 +51,9 @@ int board_init(void)
 	/* adress of boot parameters */
 	gd->bd->bi_boot_params = CONFIG_SYS_SDRAM_BASE + 0x100;
 
-	at91_seriald_hw_init();
+	as92_seriald_hw_init();
 #ifdef CONFIG_CMD_NAND
-	at91sam9260ek_nand_hw_init();
+	asm9260t_evk_nand_hw_init();
 #endif
 #ifdef CONFIG_HAS_DATAFLASH
 	at91_spi0_hw_init((1 << 0) | (1 << 1));
@@ -82,8 +82,8 @@ void reset_phy(void)
 int board_eth_init(bd_t *bis)
 {
 	int rc = 0;
-#ifdef CONFIG_MACB
-	rc = macb_eth_initialize(0, (void *)0, 0x00);
+#ifdef	CONFIG_MAC9260
+	rc = mac9260_eth_initialize(bis);
 #endif
 	return rc;
 }

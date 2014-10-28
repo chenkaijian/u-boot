@@ -25,24 +25,24 @@
 # define PUP 0
 #endif
 
-void at91_serial0_hw_init(void)
+void as92_serial0_hw_init(void)
 {
 }
 
-void at91_serial1_hw_init(void)
+void as92_serial1_hw_init(void)
 {
 }
 
-void at91_serial2_hw_init(void)
+void as92_serial2_hw_init(void)
 {
 }
 
-void at91_seriald_hw_init(void)
+void as92_seriald_hw_init(void)
 {
 }
 
 #if defined(CONFIG_HAS_DATAFLASH) || defined(CONFIG_ATMEL_SPI)
-void at91_spi0_hw_init(unsigned long cs_mask)
+void as92_spi0_hw_init(unsigned long cs_mask)
 {
 }
 
@@ -52,13 +52,13 @@ void as92_spi1_hw_init(unsigned long cs_mask)
 #endif
 
 #ifdef CONFIG_MACB
-void at91_macb_hw_init(void)
+void as92_macb_hw_init(void)
 {
 }
 #endif
 
 #if defined(CONFIG_GENERIC_ATMEL_MCI)
-void at91_mci_hw_init(void)
+void as92_mci_hw_init(void)
 {
 	/* Enable mci clock */
 }
