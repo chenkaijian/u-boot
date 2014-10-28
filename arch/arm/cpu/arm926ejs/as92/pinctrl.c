@@ -103,21 +103,21 @@ void gpioIrq_enable_edge(u32 port, u32 pin, u32 type)
     val = (u32)(1 << (pin+(port%4)*8));
 
 	addr = (u32)(HW_GPIO_IS0 + (port/32 * 0x10000));
-	writel(addr + 8, val);	//Ñ¡Ôñ±ßÑØ´¥·¢
+	writel(addr + 8, val);	//é€‰æ‹©è¾¹æ²¿è§¦å‘
 
 	addr = (u32)(HW_GPIO_IEV0 + (port/32 * 0x10000));
 	if (type == GPIO_IRQ_EDGE_FALLING)
 	{
-        writel(addr + 8, val);//ÏÂ½µÑØ
+        writel(addr + 8, val);//ä¸‹é™æ²¿
     }
     else
     {
-		writel(addr + 4, val);//ÉÏÉýÑØ
+		writel(addr + 4, val);//ä¸Šå‡æ²¿
     }
 	
 
     addr = (u32)(HW_GPIO_IE0 + (port/32 * 0x10000));
-	writel(addr + 4, val);	//Ê¹ÄÜÎªÖÐ¶ÏÔ´
+	writel(addr + 4, val);	//ä½¿èƒ½ä¸ºä¸­æ–­æº
 }
 
 void gpioIrq_enable_level(u32 port, u32 pin, u32 type)
@@ -128,21 +128,21 @@ void gpioIrq_enable_level(u32 port, u32 pin, u32 type)
     val = (u32)(1 << (pin+(port%4)*8));
 
 	addr = (u32)(HW_GPIO_IS0 + (port/32 * 0x10000));
-	writel(addr + 4, val);	//Ñ¡ÔñµçÆ½´¥·¢
+	writel(addr + 4, val);	//é€‰æ‹©ç”µå¹³è§¦å‘
 
 	addr = (u32)(HW_GPIO_IEV0 + (port/32 * 0x10000));
 	if (type == GPIO_IRQ_LEVEL_LOW)
 	{
-        writel(addr + 8, val);//µÍµçÆ½
+        writel(addr + 8, val);//ä½Žç”µå¹³
     }
     else
     {
-	writel(addr + 4, val);//¸ßµçÆ½
+	writel(addr + 4, val);//é«˜ç”µå¹³
     }
 	
 
     addr = (u32)(HW_GPIO_IE0 + (port/32 * 0x10000));
-	writel(addr + 4, val);	//Ê¹ÄÜÎªÖÐ¶ÏÔ´
+	writel(addr + 4, val);	//ä½¿èƒ½ä¸ºä¸­æ–­æº
 }
 
 void gpioIrq_disable(u32 port, u32 pin)
@@ -150,7 +150,7 @@ void gpioIrq_disable(u32 port, u32 pin)
 	u32 val, addr;
 	val = (u32)(1 << (pin+(port%4)*8));
     addr = (u32)(HW_GPIO_IE0 + (port/32 * 0x10000));
-	writel(addr + 8, val);	//¹Ø±ÕÖÐ¶ÏÔ´
+	writel(addr + 8, val);	//å…³é—­ä¸­æ–­æº
 }
 
 void gpioIrq_enable(u32 port,u32 pin)
@@ -158,7 +158,7 @@ void gpioIrq_enable(u32 port,u32 pin)
 	u32 val, addr;
 	val = (u32)(1 << (pin+(port%4)*8));
     addr = (u32)(HW_GPIO_IE0 + (port/32 * 0x10000));
-	writel(addr + 4, val);	//´ò¿ªÖÐ¶ÏÔ´
+	writel(addr + 4, val);	//æ‰“å¼€ä¸­æ–­æº
 }
 
 void gpioIrq_clear(u32 port, u32 pin)
@@ -166,7 +166,7 @@ void gpioIrq_clear(u32 port, u32 pin)
 	u32 val, addr;
 	val = (u32)(1 << (pin+(port%4)*8));
     addr = (u32)(HW_GPIO_IC0 + (port/32 * 0x10000));
-	writel(addr + 4, val);	//ÇåÖÐ¶ÏÔ´
+	writel(addr + 4, val);	//æ¸…ä¸­æ–­æº
 }
 
 int is_gpioIrq_pending(u32 port, u32 pin)
