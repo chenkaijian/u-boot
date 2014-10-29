@@ -102,7 +102,7 @@
  * leaving the correct space for initial global data structure above
  * that address while providing maximum stack area below.
  */
-# define CONFIG_SYS_INIT_SP_ADDR	0x40000000
+# define CONFIG_SYS_INIT_SP_ADDR	0x40002000
 
 /*
  * The (arm)linux board id set by generic code depending on configured board
