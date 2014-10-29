@@ -23,7 +23,7 @@
  * Since the linker has to swallow that define, we must use a pure
  * hex number here!
  */
-#define CONFIG_SYS_TEXT_BASE		0x21f00000
+#define CONFIG_SYS_TEXT_BASE		0x20680000
 
 /* ARM asynchronous clock */
 #define CONFIG_SYS_AS92_SLOW_CLOCK	32768		/* slow clock xtal */
@@ -148,7 +148,7 @@
 #define CONFIG_SYS_NO_FLASH			1
 
 /* Ethernet */
-#define CONFIG_DRIVER_AS92MAC
+#define CONFIG_DRIVER_AS92MAC		1
 #define CONFIG_RMII			1
 #define CONFIG_NET_RETRY_COUNT		20
 #define CONFIG_RESET_PHY_R		1
