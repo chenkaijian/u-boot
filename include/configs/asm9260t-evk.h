@@ -23,7 +23,7 @@
  * Since the linker has to swallow that define, we must use a pure
  * hex number here!
  */
-#define CONFIG_SYS_TEXT_BASE		0x20680000
+#define CONFIG_SYS_TEXT_BASE		0x21000000
 
 /* ARM asynchronous clock */
 #define CONFIG_SYS_AS92_SLOW_CLOCK	32768		/* slow clock xtal */
@@ -231,7 +231,7 @@
 	"root=/dev/mmcblk0p2 rw rootfstype=ext4 rootwait"
 #endif
 
-#define CONFIG_SYS_PROMPT		"U-Boot> "
+#define CONFIG_SYS_PROMPT		"CKJ-U-Boot~11> "
 #define CONFIG_SYS_CBSIZE		256
 #define CONFIG_SYS_MAXARGS		16
 #define CONFIG_SYS_PBSIZE		(CONFIG_SYS_CBSIZE + sizeof(CONFIG_SYS_PROMPT) + 16)

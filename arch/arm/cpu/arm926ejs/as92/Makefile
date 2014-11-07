@@ -12,6 +12,7 @@ obj-y += clock.o
 obj-y += cpu.o
 obj-y	+= reset.o
 obj-y	+= timer.o
+obj-y	+= pinctrl.o
 
 ifndef CONFIG_SKIP_LOWLEVEL_INIT
 obj-y	+= lowlevel_init.o

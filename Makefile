@@ -186,7 +186,7 @@ export	HOSTARCH HOSTOS
 
 # set default to nothing for native builds
 ifeq ($(HOSTARCH),$(ARCH))
-CROSS_COMPILE ?=
+CROSS_COMPILE ?= 
 endif
 
 KCONFIG_CONFIG	?= .config
@@ -824,6 +824,9 @@ u-boot.bin: u-boot FORCE
 	$(call if_changed,objcopy)
 	$(call DO_STATIC_RELA,$<,$@,$(CONFIG_SYS_TEXT_BASE))
 	$(BOARD_SIZE_CHECK)
+
+	rm -f /var/lib/tftpboot/u-boot.bin
+	cp u-boot.bin /var/lib/tftpboot
 
 u-boot.ldr:	u-boot
 		$(CREATE_LDR_ENV)
